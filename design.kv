@@ -1,0 +1,205 @@
+#:import utils kivy.utils
+
+<MyLayout>
+
+    BoxLayout:
+        orientation:"vertical"
+        size:root.width,root.height
+
+
+        TextInput:
+            id:calc_input
+            text:"0"
+            halign:"right"
+            font_size:32
+            size_hint:(1,.15)
+
+        GridLayout:
+            cols:4
+            rows:5
+            spacing:2
+
+            #Row1
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"%"
+                background_normal:''
+                background_color:(180/255,180/255,180/255,1)
+
+
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text: u"\u00AB"
+                on_press:root.remove()
+                background_normal:''
+                background_color:(180/255,180/255,180/255,1)
+
+            Button:
+                id:clear
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"AC"
+                on_press:root.clear()
+                background_normal:''
+                background_color:(180/255,180/255,180/255,1)
+
+
+            Button:
+                size_hint:(0.2,0.2)
+
+                font_size:32
+                text:"/"
+                on_press:root.math_sign("/")
+                background_normal:''
+                background_color:(255/255,149/255,0/255,1)
+
+            # row 2
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"7"
+                background_normal:''
+                background_color:(80/255,80/255,80/255,1)
+                on_press:root.button_press(7)
+
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"8"
+                background_normal:''
+                background_color:(80/255,80/255,80/255,1)
+                on_press:root.button_press(8)
+
+
+
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"9"
+                background_normal:''
+                background_color:(80/255,80/255,80/255,1)
+                on_press:root.button_press(9)
+
+
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"x"
+                on_press:root.math_sign("*")
+                background_normal:''
+                background_color:(255/255,149/255,0/255,1)
+
+            #row 3
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"4"
+                background_normal:''
+                background_color:(80/255,80/255,80/255,1)
+                on_press:root.button_press(4)
+
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"5"
+                background_normal:''
+                background_color:(80/255,80/255,80/255,1)
+                on_press:root.button_press(5)
+
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"6"
+                background_normal:''
+                background_color:(80/255,80/255,80/255,1)
+                on_press:root.button_press(6)
+
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"-"
+                on_press:root.math_sign("-")
+                background_normal:''
+                background_color:(255/255,149/255,0/255,1)
+
+            #row4
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"1"
+                background_normal:''
+                background_color:(80/255,80/255,80/255,1)
+                on_press:root.button_press(1)
+
+
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"2"
+                background_normal:''
+                background_color:(80/255,80/255,80/255,1)
+                on_press:root.button_press(2)
+
+
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"3"
+                background_normal:''
+                background_color:(80/255,80/255,80/255,1)
+                on_press:root.button_press(3)
+
+
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"+"
+                on_press:root.math_sign("+")
+                background_normal:''
+                background_color:(255/255,149/255,0/255,1)
+
+            #row 5
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"+/-"
+                background_normal:''
+                background_color:(80/255,80/255,80/255,1)
+                on_press:root.inverse()
+
+
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"0"
+                background_normal:''
+                background_color:(100/255,100/255,100/255,1)
+                on_press:root.button_press(0)
+
+
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"."
+                background_normal:''
+                background_color:(80/255,80/255,80/255,1)
+                on_press:root.dot()
+
+
+            Button:
+                size_hint:(0.2,0.2)
+                font_size:32
+                text:"="
+                on_press:root.equal()
+                background_normal:''
+                background_color:(255/255,149/255,0/255,1)
+
+
+
+
+
+
+
+
